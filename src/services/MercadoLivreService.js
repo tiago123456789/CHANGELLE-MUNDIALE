@@ -10,17 +10,18 @@ class MercadoLivreCrawlerService {
 
     async findProductsByNameAndLimit(name, limit) {
         const productsInCache = await this._cacheClient.smembers(name);
-        const isNotNecessary_extractProductsData = (
+        const isNotNecessaryExtractProductsData
+ = (
             productsInCache != null && productsInCache.length >= limit
         );
     
-        if (isNotNecessary_extractProductsData) {
+        if (isNotNecessaryExtractProductsData) {
             const positionInitial = 0;
             logger.info(`Get datas products with search ${name} and limit ${limit} in cache.`);
             return productsInCache.slice(positionInitial, limit);
-        }
+        } 
     
-        const products = await this._mercadoLivreCrawler
+        const products = await this._mercadoLivreCrawler 
             .getContent({
                 productName: name,
                 quantityItensReturn: limit,
