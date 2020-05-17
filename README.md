@@ -37,7 +37,7 @@ Instruções para fazer build do projeto para produção:
 ```
 - Executar o comando: **npm run build** para fazer build do projeto para fazer com que o código do projeto seja transpilado é transformado em uma versão mais antiga para não ter problema por não suportar as novas funcionalidades do javascript.
 
-Explicando o que é cada informações no arquivo .env:
+Explicando o que é cada informação no arquivo .env:
 =====================================================
 
 - **ENV** é o ambiente em que o projeto está sendo executado.
