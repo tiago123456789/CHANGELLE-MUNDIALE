@@ -34,3 +34,4 @@ jobs:
         echo "REDIS_PORT=6379" >> .env.testing
         echo "SWAGGER_PATH_ROUTES='./src/routes/*.js'" >> .env.testing
         echo "APP_URL=localhost:3000" >> .env.testing
+    - run: npm run test
