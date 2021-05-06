@@ -27,3 +27,10 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm install
     - run: docker-compose up -d 
+    - run: |
+        echo "ENV=dev" >> .env.testing
+        echo "PORT=3000" >> .env.testing
+        echo "REDIS_HOST=127.0.0.1" >> .env.testing
+        echo "REDIS_PORT=6379" >> .env.testing
+        echo "SWAGGER_PATH_ROUTES='./src/routes/*.js'" >> .env.testing
+        echo "APP_URL=localhost:3000" >> .env.testing
